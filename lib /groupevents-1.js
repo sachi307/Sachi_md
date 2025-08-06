@@ -90,15 +90,3 @@ const GroupEvents = async (conn, update) => {
                     text: `*Admin Event*\n\n` +
                           `@${promoter} has promoted @${userName} to admin. 🎉\n` +
                           `Time: ${timestamp}\n` +
-                          `*Group:* ${metadata.subject}`,
-                    mentions: [update.author, num],
-                    contextInfo: getContextInfo({ sender: update.author }),
-                });
-            }
-        }
-    } catch (err) {
-        console.error('Group event error:', err);
-    }
-};
-
-module.exports = GroupEvents;
